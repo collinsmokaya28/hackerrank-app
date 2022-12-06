@@ -24,6 +24,7 @@ class QuestionsController < ApplicationController
     def destroy
         question = Question.find(params[:id])
         question.destroy
+        render json: question. status: :no_content
     end
 
     private

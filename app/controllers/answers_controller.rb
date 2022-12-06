@@ -20,7 +20,9 @@ class AnswersController < ApplicationController
     end
 
     def destroy
-        Answer.destroy
+        answer = Answer.find(params[:id])
+        answer.destroy
+        render json: answer, status: :no_content
     end
 
     private

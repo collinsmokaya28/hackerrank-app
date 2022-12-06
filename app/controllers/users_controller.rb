@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
     def index 
         user = User.all
-        render json: user
+        render json: user, status: 200
     end
 
     #check to see if current_user(defined in the controller) is returning a currently logged in user. THis is to ensure that our user does not need to follow authentication agian
@@ -25,10 +25,18 @@ class UsersController < ApplicationController
     end
 
     def update
+        user = User.find(params[:id])
+        user.update(user_params)
+        render json: user
     end
 
     def destroy
+        user = User.find(params[:id])
+        user.destroy
+        render json: user. status: :no_content
     end
+
+    private
 
     def user_params
         params.permit(:username,:email, :password)
