@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+    
+    # skip_before_action :authenticate_user
 
     def index 
         question = Question.all
@@ -24,7 +26,7 @@ class QuestionsController < ApplicationController
     def destroy
         question = Question.find(params[:id])
         question.destroy
-        render json: question. status: :no_content
+        render json: question, status: :no_content 
     end
 
     private

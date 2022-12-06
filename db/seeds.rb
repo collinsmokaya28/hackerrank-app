@@ -14,11 +14,10 @@ puts "Seeding................................"
 
 user1 = User.create(username: "Hacker", email: "hacker@gmail.com", password: "hacker123")
 
-answer1 = Answer.create(correct_answer: "A call to super invokes the parent method with the same arguments that were passed to the child method. An error will therefore occur if the arguments passed to the child method don’t match what the parent is expecting.
+answer1 = Answer.create(correct_answer: "A call to super invokes the parent method with the same arguments that were passed to the child method. An error will therefore occur if the arguments passed to the child method do not match what the parent is expecting.
 
 A call to super() invokes the parent method without any arguments, as presumably expected. As always, being explicit in your code is a good thing.")
 
-question1 = Question.create(question: "
-What is the difference between calling super and calling super()?", user_id: user1.id, answer_id: answer1.id)
+question1 = Question.create(question: "What is the difference between calling super and calling super()?", user_id: user1.id, answer_id: answer1.id)
 
 puts "Done seeding!!!"
