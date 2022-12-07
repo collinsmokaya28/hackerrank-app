@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
 
-    has_many :questions
+    has_many :questions, dependent: :destroy
     has_many :answers, through: :questions
 
     validates :username, presence: true
