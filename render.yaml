@@ -10,9 +10,9 @@ services:
     #startCommand: bundle exec rails s
     #envVars:
       -key: RAILS_MASTER_KEY
-      sync: false
+        sync: false
       -key: DATABASE_URL
-      fromDatabase:
+        fromDatabase:
         name: postgres
         property: connectionString
     plan: free
