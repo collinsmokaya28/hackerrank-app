@@ -15,5 +15,5 @@ services:
       #  fromDatabase:
         name: postgres
         property: connectionString
-    plan: free
-    maxmemoryPolicy: noeviction
+      plan: free
+      maxmemoryPolicy: noeviction
