@@ -3,7 +3,7 @@ services:
     name: myapp-web
     env: ruby
     region: frankfurt # or oregon
-    plan: starter
+    plan: free
     numInstances: 1
     buildCommand: ./bin/render-build.sh
     startCommand: REDIS_URL="redis://${REDIS_HOST}" bundle exec puma -C config/puma.rb
@@ -26,7 +26,7 @@ services:
     name: myapp-sidekiq
     env: ruby
     region: frankfurt # or oregon
-    plan: starter
+    plan: free
     buildCommand: bundle install && bundle exec rake assets:precompile
     startCommand: REDIS_URL="redis://${REDIS_HOST}" bundle exec sidekiq -e production
     envVars:
@@ -55,6 +55,6 @@ services:
 
 databases:
   - name: myapp-db
-    plan: starter
+    plan: free
     region: frankfurt # or oregon
       
