@@ -3,6 +3,5 @@ databases:
 services:
       -key: RAILS_MASTER_KE
       -key: DATABASE_URL
-        property: connectionString
         plan: free
         maxmemoryPolicy: noeviction
