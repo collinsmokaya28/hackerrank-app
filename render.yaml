@@ -3,7 +3,6 @@ databases:
 services:
       -key: RAILS_MASTER_KE
       -key: DATABASE_URL
-        name: postgres
         property: connectionString
         plan: free
         maxmemoryPolicy: noeviction
