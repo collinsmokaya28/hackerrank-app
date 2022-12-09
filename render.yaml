@@ -1,6 +1,6 @@
 databases:
     -name: sqlite3
-     ipAllowList: []
+     
 
 services:
     -type: web
