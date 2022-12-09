@@ -1,5 +1,5 @@
 databases:
-  -name: sqlite3
+  ipAllowList: []
 services:
   name: rails
   env: ruby
@@ -7,7 +7,7 @@ services:
   startCommand: bundle exec rails s
   envVars:
     fromDatabase:
-      name: sqlite3
+      name: postgres
       property: connectionString
   ipAllowList: []
   plan: free
